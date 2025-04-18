@@ -110,8 +110,7 @@ h1 {
 <script>
     function date() {
 var today = new Date();
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var dayName = days[today.getDay()];
+var dayName = today.toLocaleDateString("en-US", {weekday: "long"});
 document.getElementById("day").innerHTML = dayName;
 document.getElementById('date').innerHTML = today.toDateString();
 }
